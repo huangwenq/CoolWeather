@@ -65,10 +65,10 @@ public class WeatherActivity extends AppCompatActivity {
     ImageView deskImg;
     @Bind(R.id.swipe_refresh)
     SwipeRefreshLayout swipeRefresh;
-//    @Bind(R.id.nav_btn)
-//    Button navBtn;
-//    @Bind(R.id.drawer_layout)
-//    DrawerLayout drawerLayout;
+    @Bind(R.id.nav_btn)
+    Button navBtn;
+    @Bind(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     private String mWeatherId;
 
@@ -111,13 +111,12 @@ public class WeatherActivity extends AppCompatActivity {
                 requestWeather(mWeatherId);
             }
         });
-//        navBtn.setOnClickListener(new View.OnClickListener() {
-//                                      @Override
-//                                      public void onClick(View view) {
-//                                          drawerLayout.openDrawer(GravityCompat.START);
-//                                      }
-//                                  }
-//        );
+        navBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
     }
 
